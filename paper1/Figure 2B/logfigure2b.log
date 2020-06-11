@@ -1,0 +1,71 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper1/figure2b/rep1
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will build scripts for calling peaks according to the experimental plan in /projects/b1025/brian/paper1/figure2b/rep1/chipfigure2b.csv.
+Will run scripts for calling peaks.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-02-06 13:22:48]	Comparison file contained windows or mac carriage returns.  Cleaning it.
+[2020-02-06 13:22:48]	Looking for Fastq files in /projects/b1025/brian/paper1/figure2b/rep1.
+[2020-02-06 13:22:48]	Found /projects/b1025/brian/paper1/figure2b/rep1/293T_input.fastq.gz /projects/b1025/brian/paper1/figure2b/rep1/PolII_DMSO.fastq.gz /projects/b1025/brian/paper1/figure2b/rep1/PolII_KL1.fastq.gz /projects/b1025/brian/paper1/figure2b/rep1/PolII_KL2.fastq.gz
+[2020-02-06 13:22:48]	Project name is rep1
+Timestamp 2020.02.06.1322.48
+[2020-02-06 13:22:48]	Creating metadata file for project rep1
+[2020-02-06 13:22:53]	Sample name is 293T_input
+[2020-02-06 13:22:56]	Sample name is PolII_DMSO
+[2020-02-06 13:23:01]	Sample name is PolII_KL1
+[2020-02-06 13:23:06]	Sample name is PolII_KL2
+[2020-02-06 13:23:06]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b
+mkdir /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1
+mkdir /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/scripts
+mkdir /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/bam
+mkdir /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1’: File exists
+SampleSet: 293T_input PolII_DMSO PolII_KL1 PolII_KL2
+FastqSet for 293T_input:  /projects/b1025/brian/paper1/figure2b/rep1/293T_input.fastq.gz
+[2020-02-06 13:23:06]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/bam’: File exists
+Samples: 293T_input PolII_DMSO PolII_KL1 PolII_KL2
+[2020-02-06 13:23:06]	Printing /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/scripts/run_293T_input_bowtie_align.sh
+[2020-02-06 13:23:06]	Printing /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/scripts/run_PolII_DMSO_bowtie_align.sh
+[2020-02-06 13:23:06]	Printing /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/scripts/run_PolII_KL1_bowtie_align.sh
+[2020-02-06 13:23:06]	Printing /projects/b1025/brian/paper1/figure2b/rep1/outputfigure2b/rep1/scripts/run_PolII_KL2_bowtie_align.sh
+[2020-02-06 13:23:06]	Starting alignment scripts.
+Predicted SLURM job IDs:  5404528:5404529:5404530:5404531
+[2020-02-06 13:23:06]	Need to wait for the following jobs to finish:
+5404528:5404529:5404530:5404531
+[2020-02-06 13:23:06]	Creating dependent job that will only run after alignments finish.
+[2020-02-06 13:23:06]	Waiting for job 5404532 to finish. (each . = 300 seconds)
+............Job 5404532 is complete, scheduler SLURM
+
+[2020-02-06 14:23:08]	Job 5404532 done.  Continuing.
+[2020-02-06 14:23:08]	Initiating peak calling for project rep1
+[2020-02-06 14:23:08]	Setting up scripts for narrow peaks for IP file PolII_DMSO
+[2020-02-06 14:23:08]	Setting up scripts for narrow peaks for IP file PolII_KL1
+[2020-02-06 14:23:08]	Setting up scripts for narrow peaks for IP file PolII_KL2
+[2020-02-06 14:23:08]	Starting peak calling scripts.
+[2020-02-06 14:23:08]	Need to wait for the following jobs to finish:
+5405370:5405371:5405372
+[2020-02-06 14:23:08]	Creating dependent job that will only run after peak callers finish.
+[2020-02-06 14:23:08]	Waiting for job 5405373 to finish. (each . = 300 seconds)
+......Job 5405373 is complete, scheduler SLURM
+
+[2020-02-06 14:53:10]	Job 5405373 done.  Continuing.
+[2020-02-06 14:53:10]	Finished.

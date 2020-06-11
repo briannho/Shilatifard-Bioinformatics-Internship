@@ -1,0 +1,54 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3d/outputfigure3d/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper1/figure3d/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper1/figure3d/outputfigure3d
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-02-13 13:18:27]	Looking for Fastq files in /projects/b1025/brian/paper1/figure3d/.
+[2020-02-13 13:18:27]	Found /projects/b1025/brian/paper1/figure3d//Fast_PolII.fastq.gz /projects/b1025/brian/paper1/figure3d//Slow_PolII.fastq.gz /projects/b1025/brian/paper1/figure3d//WT_PolII.fastq.gz
+[2020-02-13 13:18:27]	Project name is figure3d
+Timestamp 2020.02.13.1318.27
+[2020-02-13 13:18:27]	Creating metadata file for project figure3d
+[2020-02-13 13:18:33]	Sample name is Fast_PolII
+[2020-02-13 13:18:36]	Sample name is Slow_PolII
+[2020-02-13 13:18:44]	Sample name is WT_PolII
+[2020-02-13 13:18:44]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper1/figure3d/outputfigure3d
+mkdir /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d
+mkdir /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/scripts
+mkdir /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/bam
+mkdir /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d’: File exists
+SampleSet: Fast_PolII Slow_PolII WT_PolII
+FastqSet for Fast_PolII:  /projects/b1025/brian/paper1/figure3d//Fast_PolII.fastq.gz
+[2020-02-13 13:18:44]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/bam’: File exists
+Samples: Fast_PolII Slow_PolII WT_PolII
+[2020-02-13 13:18:44]	Printing /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/scripts/run_Fast_PolII_bowtie_align.sh
+[2020-02-13 13:18:44]	Printing /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/scripts/run_Slow_PolII_bowtie_align.sh
+[2020-02-13 13:18:44]	Printing /projects/b1025/brian/paper1/figure3d/outputfigure3d/figure3d/scripts/run_WT_PolII_bowtie_align.sh
+[2020-02-13 13:18:44]	Starting alignment scripts.
+Predicted SLURM job IDs:  5765159:5765161:5765162
+[2020-02-13 13:18:45]	Need to wait for the following jobs to finish:
+5765159:5765161:5765162
+[2020-02-13 13:18:45]	Creating dependent job that will only run after alignments finish.
+[2020-02-13 13:18:45]	Waiting for job 5765163 to finish. (each . = 300 seconds)
+.........Job 5765163 is complete, scheduler SLURM
+
+[2020-02-13 14:03:48]	Job 5765163 done.  Continuing.
+[2020-02-13 14:03:48]	Finished.

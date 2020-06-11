@@ -1,0 +1,54 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3h/outputfigure3h/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper1/figure3h/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper1/figure3h/outputfigure3h
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-02-13 13:16:00]	Looking for Fastq files in /projects/b1025/brian/paper1/figure3h/.
+[2020-02-13 13:16:00]	Found /projects/b1025/brian/paper1/figure3h//DMSO_PRO.fastq.gz /projects/b1025/brian/paper1/figure3h//KL1_PRO.fastq.gz /projects/b1025/brian/paper1/figure3h//KL2_PRO.fastq.gz
+[2020-02-13 13:16:00]	Project name is figure3h
+Timestamp 2020.02.13.1316.00
+[2020-02-13 13:16:00]	Creating metadata file for project figure3h
+[2020-02-13 13:16:13]	Sample name is DMSO_PRO
+[2020-02-13 13:16:23]	Sample name is KL1_PRO
+[2020-02-13 13:16:27]	Sample name is KL2_PRO
+[2020-02-13 13:16:27]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper1/figure3h/outputfigure3h
+mkdir /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h
+mkdir /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/scripts
+mkdir /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/bam
+mkdir /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h’: File exists
+SampleSet: DMSO_PRO KL1_PRO KL2_PRO
+FastqSet for DMSO_PRO:  /projects/b1025/brian/paper1/figure3h//DMSO_PRO.fastq.gz
+[2020-02-13 13:16:27]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/bam’: File exists
+Samples: DMSO_PRO KL1_PRO KL2_PRO
+[2020-02-13 13:16:27]	Printing /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/scripts/run_DMSO_PRO_bowtie_align.sh
+[2020-02-13 13:16:27]	Printing /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/scripts/run_KL1_PRO_bowtie_align.sh
+[2020-02-13 13:16:27]	Printing /projects/b1025/brian/paper1/figure3h/outputfigure3h/figure3h/scripts/run_KL2_PRO_bowtie_align.sh
+[2020-02-13 13:16:27]	Starting alignment scripts.
+Predicted SLURM job IDs:  5765104:5765105:5765106
+[2020-02-13 13:16:27]	Need to wait for the following jobs to finish:
+5765104:5765105:5765106
+[2020-02-13 13:16:27]	Creating dependent job that will only run after alignments finish.
+[2020-02-13 13:16:27]	Waiting for job 5765107 to finish. (each . = 300 seconds)
+...............Job 5765107 is complete, scheduler SLURM
+
+[2020-02-13 14:31:30]	Job 5765107 done.  Continuing.
+[2020-02-13 14:31:30]	Finished.
