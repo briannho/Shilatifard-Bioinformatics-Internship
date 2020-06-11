@@ -1,0 +1,80 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2a/outputfigure2a/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper2/figure2a/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper2/figure2a/outputfigure2a
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will build scripts for calling peaks according to the experimental plan in /projects/b1025/brian/paper2/figure2a/chipfigure2a.csv.
+Will run scripts for calling peaks.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-02-06 15:02:26]	Comparison file contained windows or mac carriage returns.  Cleaning it.
+[2020-02-06 15:02:26]	Looking for Fastq files in /projects/b1025/brian/paper2/figure2a/.
+[2020-02-06 15:02:26]	Found /projects/b1025/brian/paper2/figure2a//ESR1_T2D.fastq.gz /projects/b1025/brian/paper2/figure2a//ESR1_T2E.fastq.gz /projects/b1025/brian/paper2/figure2a//ESR1_WTD.fastq.gz /projects/b1025/brian/paper2/figure2a//ESR1_WTE.fastq.gz /projects/b1025/brian/paper2/figure2a//Input_KOD.fastq.gz /projects/b1025/brian/paper2/figure2a//Input_KOE.fastq.gz /projects/b1025/brian/paper2/figure2a//Input_WTD.fastq.gz /projects/b1025/brian/paper2/figure2a//Input_WTE.fastq.gz
+[2020-02-06 15:02:26]	Project name is figure2a
+Timestamp 2020.02.06.1502.26
+[2020-02-06 15:02:26]	Creating metadata file for project figure2a
+[2020-02-06 15:02:27]	Sample name is ESR1_T2D
+[2020-02-06 15:02:28]	Sample name is ESR1_T2E
+[2020-02-06 15:02:29]	Sample name is ESR1_WTD
+[2020-02-06 15:02:30]	Sample name is ESR1_WTE
+[2020-02-06 15:02:32]	Sample name is Input_KOD
+[2020-02-06 15:02:33]	Sample name is Input_KOE
+[2020-02-06 15:02:34]	Sample name is Input_WTD
+[2020-02-06 15:02:35]	Sample name is Input_WTE
+[2020-02-06 15:02:35]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper2/figure2a/outputfigure2a
+mkdir /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a
+mkdir /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts
+mkdir /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/bam
+mkdir /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a’: File exists
+SampleSet: ESR1_T2D ESR1_T2E ESR1_WTD ESR1_WTE Input_KOD Input_KOE Input_WTD Input_WTE
+FastqSet for ESR1_T2D:  /projects/b1025/brian/paper2/figure2a//ESR1_T2D.fastq.gz
+[2020-02-06 15:02:35]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/bam’: File exists
+Samples: ESR1_T2D ESR1_T2E ESR1_WTD ESR1_WTE Input_KOD Input_KOE Input_WTD Input_WTE
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_ESR1_T2D_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_ESR1_T2E_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_ESR1_WTD_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_ESR1_WTE_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_Input_KOD_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_Input_KOE_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_Input_WTD_bowtie_align.sh
+[2020-02-06 15:02:35]	Printing /projects/b1025/brian/paper2/figure2a/outputfigure2a/figure2a/scripts/run_Input_WTE_bowtie_align.sh
+[2020-02-06 15:02:35]	Starting alignment scripts.
+Predicted SLURM job IDs:  5405931:5405932:5405933:5405935:5405936:5405937:5405938:5405939
+[2020-02-06 15:02:37]	Need to wait for the following jobs to finish:
+5405931:5405932:5405933:5405935:5405936:5405937:5405938:5405939
+[2020-02-06 15:02:37]	Creating dependent job that will only run after alignments finish.
+[2020-02-06 15:02:39]	Waiting for job 5405940 to finish. (each . = 300 seconds)
+.....Job 5405940 is complete, scheduler SLURM
+
+[2020-02-06 15:27:41]	Job 5405940 done.  Continuing.
+[2020-02-06 15:27:41]	Initiating peak calling for project figure2a
+[2020-02-06 15:27:41]	Setting up scripts for narrow peaks for IP file ESR1_WTD
+[2020-02-06 15:27:41]	Setting up scripts for narrow peaks for IP file ESR1_WTE
+[2020-02-06 15:27:41]	Setting up scripts for narrow peaks for IP file ESR1_T2D
+[2020-02-06 15:27:41]	Setting up scripts for narrow peaks for IP file ESR1_T2E
+[2020-02-06 15:27:41]	Starting peak calling scripts.
+[2020-02-06 15:27:41]	Need to wait for the following jobs to finish:
+5406184:5406185:5406186:5406187
+[2020-02-06 15:27:41]	Creating dependent job that will only run after peak callers finish.
+[2020-02-06 15:27:41]	Waiting for job 5406188 to finish. (each . = 300 seconds)
+..Job 5406188 is complete, scheduler SLURM
+
+[2020-02-06 15:37:44]	Job 5406188 done.  Continuing.
+[2020-02-06 15:37:44]	Finished.

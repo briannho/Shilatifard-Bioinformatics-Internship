@@ -1,0 +1,2 @@
+/projects/b1025/brian/paper2/figure3h/outputfigure3h/figure3h/bam/DMSO.bam	/projects/b1025/brian/paper2/figure3h/outputfigure3h/figure3h/peaks/DMSO.sorted.centered.bed	DMSO
+/projects/b1025/brian/paper2/figure3h/outputfigure3h/figure3h/bam/tamoxifen.bam	/projects/b1025/brian/paper2/figure3h/outputfigure3h/figure3h/peaks/DMSO.sorted.centered.bed	tamoxifen

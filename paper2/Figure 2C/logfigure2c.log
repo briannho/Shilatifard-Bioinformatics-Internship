@@ -1,0 +1,50 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2c/outputfigure2c/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper2/figure2c/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper2/figure2c/outputfigure2c
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-03-13 11:01:40]	Looking for Fastq files in /projects/b1025/brian/paper2/figure2c/.
+[2020-03-13 11:01:40]	Found /projects/b1025/brian/paper2/figure2c//a-TET2-NTD.fastq.gz
+[2020-03-13 11:01:40]	Project name is figure2c
+Timestamp 2020.03.13.1101.40
+[2020-03-13 11:01:40]	Creating metadata file for project figure2c
+[2020-03-13 11:01:42]	Sample name is a-TET2-NTD
+[2020-03-13 11:01:42]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper2/figure2c/outputfigure2c
+mkdir /projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c
+mkdir /projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c/scripts
+mkdir /projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c/bam
+mkdir /projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c’: File exists
+SampleSet: a-TET2-NTD
+FastqSet for a-TET2-NTD:  /projects/b1025/brian/paper2/figure2c//a-TET2-NTD.fastq.gz
+[2020-03-13 11:01:42]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c/bam’: File exists
+Samples: a-TET2-NTD
+[2020-03-13 11:01:42]	Printing /projects/b1025/brian/paper2/figure2c/outputfigure2c/figure2c/scripts/run_a-TET2-NTD_bowtie_align.sh
+[2020-03-13 11:01:42]	Starting alignment scripts.
+Predicted SLURM job IDs:  6590706
+[2020-03-13 11:01:43]	Need to wait for the following jobs to finish:
+6590706
+[2020-03-13 11:01:43]	Creating dependent job that will only run after alignments finish.
+[2020-03-13 11:01:43]	Waiting for job 6590708 to finish. (each . = 300 seconds)
+....Job 6590708 is complete, scheduler SLURM
+
+[2020-03-13 11:21:46]	Job 6590708 done.  Continuing.
+[2020-03-13 11:21:46]	Finished.

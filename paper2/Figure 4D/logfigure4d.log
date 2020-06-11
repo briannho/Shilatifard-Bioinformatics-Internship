@@ -1,0 +1,82 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure4d/outputfigure4d/metadata’: No such file or directory
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper2/figure4d/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper2/figure4d/outputfigure4d
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will build scripts for calling peaks according to the experimental plan in /projects/b1025/brian/paper2/figure4d/chipfigure4d.csv.
+Will run scripts for calling peaks.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output directory created.
+[2020-02-07 12:13:45]	Comparison file contained windows or mac carriage returns.  Cleaning it.
+[2020-02-07 12:13:45]	Looking for Fastq files in /projects/b1025/brian/paper2/figure4d/.
+[2020-02-07 12:13:46]	Found /projects/b1025/brian/paper2/figure4d//H3K27Ac_DMSO.fastq.gz /projects/b1025/brian/paper2/figure4d//H3K27Ac_E2.fastq.gz /projects/b1025/brian/paper2/figure4d//Input_DMSO.fastq.gz /projects/b1025/brian/paper2/figure4d//Input_E2.fastq.gz /projects/b1025/brian/paper2/figure4d//me1_DMSO.fastq.gz /projects/b1025/brian/paper2/figure4d//me1_E2.fastq.gz /projects/b1025/brian/paper2/figure4d//MLL3_DMSO.fastq.gz /projects/b1025/brian/paper2/figure4d//MLL3_E2.fastq.gz
+[2020-02-07 12:13:46]	Project name is figure4d
+Timestamp 2020.02.07.1213.46
+[2020-02-07 12:13:46]	Creating metadata file for project figure4d
+[2020-02-07 12:13:50]	Sample name is H3K27Ac_DMSO
+[2020-02-07 12:13:54]	Sample name is H3K27Ac_E2
+[2020-02-07 12:13:58]	Sample name is Input_DMSO
+[2020-02-07 12:14:00]	Sample name is Input_E2
+[2020-02-07 12:14:05]	Sample name is me1_DMSO
+[2020-02-07 12:14:09]	Sample name is me1_E2
+[2020-02-07 12:14:11]	Sample name is MLL3_DMSO
+[2020-02-07 12:14:12]	Sample name is MLL3_E2
+[2020-02-07 12:14:12]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper2/figure4d/outputfigure4d
+mkdir /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d
+mkdir /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts
+mkdir /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/bam
+mkdir /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d’: File exists
+SampleSet: H3K27Ac_DMSO H3K27Ac_E2 Input_DMSO Input_E2 me1_DMSO me1_E2 MLL3_DMSO MLL3_E2
+FastqSet for H3K27Ac_DMSO:  /projects/b1025/brian/paper2/figure4d//H3K27Ac_DMSO.fastq.gz
+[2020-02-07 12:14:12]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/bam’: File exists
+Samples: H3K27Ac_DMSO H3K27Ac_E2 Input_DMSO Input_E2 me1_DMSO me1_E2 MLL3_DMSO MLL3_E2
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_H3K27Ac_DMSO_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_H3K27Ac_E2_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_Input_DMSO_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_Input_E2_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_me1_DMSO_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_me1_E2_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_MLL3_DMSO_bowtie_align.sh
+[2020-02-07 12:14:12]	Printing /projects/b1025/brian/paper2/figure4d/outputfigure4d/figure4d/scripts/run_MLL3_E2_bowtie_align.sh
+[2020-02-07 12:14:12]	Starting alignment scripts.
+Predicted SLURM job IDs:  5425696:5425700:5425702:5425704:5425706:5425708:5425710:5425712
+[2020-02-07 12:14:13]	Need to wait for the following jobs to finish:
+5425696:5425700:5425702:5425704:5425706:5425708:5425710:5425712
+[2020-02-07 12:14:13]	Creating dependent job that will only run after alignments finish.
+[2020-02-07 12:14:15]	Waiting for job 5425713 to finish. (each . = 300 seconds)
+......Job 5425713 is complete, scheduler SLURM
+
+[2020-02-07 12:44:18]	Job 5425713 done.  Continuing.
+[2020-02-07 12:44:18]	Initiating peak calling for project figure4d
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file MLL3_DMSO
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file MLL3_E2
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file me1_DMSO
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file me1_E2
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file H3K27Ac_DMSO
+[2020-02-07 12:44:18]	Setting up scripts for narrow peaks for IP file H3K27Ac_E2
+[2020-02-07 12:44:18]	Starting peak calling scripts.
+[2020-02-07 12:44:20]	Need to wait for the following jobs to finish:
+5429164:5429166:5429167:5429168:5429169:5429170
+[2020-02-07 12:44:20]	Creating dependent job that will only run after peak callers finish.
+[2020-02-07 12:44:20]	Waiting for job 5429172 to finish. (each . = 300 seconds)
+...Job 5429172 is complete, scheduler SLURM
+
+[2020-02-07 12:59:21]	Job 5429172 done.  Continuing.
+[2020-02-07 12:59:21]	Finished.

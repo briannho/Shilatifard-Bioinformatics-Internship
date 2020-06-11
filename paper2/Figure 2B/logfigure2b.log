@@ -1,0 +1,59 @@
+buildAlign == 1, makeTracks == 0.  Assuming this is an error and switching to makeTracks = 1
+Setting up scripts for SLURM scheduler.
+Account: b1025
+Queue/Partition: buyin
+=====================================
+Analysis should be initiated either with a base space directory, or a fastq directory, or a bam directory.  Below you can see what was specified in this run.
+BaseSpaceDirectory: 
+Fastq Directory: /projects/b1025/brian/paper2/figure2b/
+Bam Directory: 
+Output Directory: /projects/b1025/brian/paper2/figure2b/outputfigure2b
+Type of Analysis: chipseq
+=====================================
+Analysis plan:
+Will trim fastq files according to trailing quality scores with Trimmomatic (TRAILING:30 MINLEN:20).
+Will build scripts for aligning fastq reads with bowtie.
+Will run scripts for aligning fastq reads with bowtie.
+Will make tracks appropriate for the UCSC genome browser.
+Will upload tracks to Shilatifard account on Amazon S3 (if user has correct credentials).
+=====================================
+Output Directory found.
+[2020-02-25 13:26:15]	Looking for Fastq files in /projects/b1025/brian/paper2/figure2b/.
+[2020-02-25 13:26:15]	Found /projects/b1025/brian/paper2/figure2b//ERa_DMSO.fastq.gz /projects/b1025/brian/paper2/figure2b//ERa_E2.fastq.gz /projects/b1025/brian/paper2/figure2b//TET2_KO.fastq.gz /projects/b1025/brian/paper2/figure2b//TET2_WT.fastq.gz
+[2020-02-25 13:26:15]	Project name is figure2b
+Timestamp 2020.02.25.1326.15
+[2020-02-25 13:26:15]	Creating metadata file for project figure2b
+[2020-02-25 13:26:17]	Sample name is ERa_DMSO
+[2020-02-25 13:26:18]	Sample name is ERa_E2
+[2020-02-25 13:26:20]	Sample name is TET2_KO
+[2020-02-25 13:26:21]	Sample name is TET2_WT
+[2020-02-25 13:26:21]	Setting up directory structure and maybe moving fastq or bam files to project sub-directory within /projects/b1025/brian/paper2/figure2b/outputfigure2b
+mkdir /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b
+mkdir /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts
+mkdir /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/bam
+mkdir /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/fastq
+
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b’: File exists
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts’: File exists
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/bam’: File exists
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/fastq’: File exists
+SampleSet: ERa_DMSO ERa_E2 TET2_KO TET2_WT
+FastqSet for ERa_DMSO:  /projects/b1025/brian/paper2/figure2b//ERa_DMSO.fastq.gz
+[2020-02-25 13:26:21]	Creating Bowtie Alignment shell scripts.
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/bam’: File exists
+mkdir: cannot create directory ‘/projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/fastqc’: File exists
+Samples: ERa_DMSO ERa_E2 TET2_KO TET2_WT
+[2020-02-25 13:26:21]	Printing /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts/run_ERa_DMSO_bowtie_align.sh
+[2020-02-25 13:26:21]	Printing /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts/run_ERa_E2_bowtie_align.sh
+[2020-02-25 13:26:22]	Printing /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts/run_TET2_KO_bowtie_align.sh
+[2020-02-25 13:26:22]	Printing /projects/b1025/brian/paper2/figure2b/outputfigure2b/figure2b/scripts/run_TET2_WT_bowtie_align.sh
+[2020-02-25 13:26:22]	Starting alignment scripts.
+Predicted SLURM job IDs:  5986080:5986081:5986082:5986083:5986084:5986085:5986086:5986087
+[2020-02-25 13:26:22]	Need to wait for the following jobs to finish:
+5986080:5986081:5986082:5986083:5986084:5986085:5986086:5986087
+[2020-02-25 13:26:22]	Creating dependent job that will only run after alignments finish.
+[2020-02-25 13:26:23]	Waiting for job 5986088 to finish. (each . = 300 seconds)
+.....Job 5986088 is complete, scheduler SLURM
+
+[2020-02-25 13:51:26]	Job 5986088 done.  Continuing.
+[2020-02-25 13:51:26]	Finished.

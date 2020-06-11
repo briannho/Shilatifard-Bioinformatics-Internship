@@ -1,0 +1,5 @@
+IP,Input,PeakType
+ESR1_WTD,Input_WTD,narrow
+ESR1_WTE,Input_WTE,narrow
+ESR1_T2D,Input_KOD,narrow
+ESR1_T2E,Input_KOE,narrow

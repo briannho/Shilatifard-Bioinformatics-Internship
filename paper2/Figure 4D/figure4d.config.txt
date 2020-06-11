@@ -1,0 +1,3 @@
+MLL3_E2.bam:MLL3_DMSO.bam	figure2cpeaks.bed	MLL3
+me1_E2.bam:me1_DMSO.bam	figure2cpeaks.bed	H3K4me1
+H3K27Ac_E2.bam:H3K27Ac_DMSO.bam	figure2cpeaks.bed	H3K27Ac

@@ -1,0 +1,7 @@
+IP,Input,PeakType
+MLL3_DMSO,Input_DMSO,narrow
+MLL3_E2,Input_E2,narrow
+me1_DMSO,Input_DMSO,narrow
+me1_E2,Input_E2,narrow
+H3K27Ac_DMSO,Input_DMSO,narrow
+H3K27Ac_E2,Input_E2,narrow

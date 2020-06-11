@@ -1,0 +1,4 @@
+ESR1_WTD.bam	merged.nontss.peaks.centered.sorted.bed	WTD
+ESR1_WTE.bam	merged.nontss.peaks.centered.sorted.bed	WTE
+ESR1_T2D.bam	merged.nontss.peaks.centered.sorted.bed	T2D
+ESR1_T2E.bam	merged.nontss.peaks.centered.sorted.bed	T2E
