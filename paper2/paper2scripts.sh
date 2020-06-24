@@ -1,7 +1,3 @@
-#TODO
-#figure out figure 2b
-
-
 ############
 #FIGURE 2a
 ############
