@@ -1,8 +1,3 @@
-# TODO
-# figure 3h
-# 	write script to output bed files containing the pausing sites of genes where max coverage is based on bedgraph file with the tss region bed file
-# 	run computematrix and plotheatmap and hope for the best
-
 ############
 #FIGURE 2b
 ############
