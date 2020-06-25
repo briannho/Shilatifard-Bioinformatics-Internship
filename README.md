@@ -6,7 +6,8 @@ This repository contains all the python and shell scripts I've coded and execute
 
 Note, all original data were taken from NCBI. Some of the datasets were too large, thus were not allowed to be uploaded. 
 
-Feel free to read my report on this project at https://docs.google.com/document/d/1Uiw6TJBsH4tFTByhmBjv2Dk1AuRo4bdH-Wu-YPiXXn0/edit?usp=sharing.  
+Feel free to read my report on this project at https://docs.google.com/document/d/1Uiw6TJBsH4tFTByhmBjv2Dk1AuRo4bdH-Wu-YPiXXn0/edit?usp=sharing.
+
 Read more about the lab at https://labs.feinberg.northwestern.edu/shilatifard/.
 
 ## Sources
