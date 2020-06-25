@@ -6,7 +6,7 @@ This repository contains all the python and shell scripts I've coded and execute
 
 Note, all original data were taken from NCBI. Some of the datasets were too large, thus were not allowed to be uploaded. 
 
-Feel free to read my report on my project at https://docs.google.com/document/d/1Uiw6TJBsH4tFTByhmBjv2Dk1AuRo4bdH-Wu-YPiXXn0/edit?usp=sharing.
+Feel free to read my report on this project at https://docs.google.com/document/d/1Uiw6TJBsH4tFTByhmBjv2Dk1AuRo4bdH-Wu-YPiXXn0/edit?usp=sharing.
 
 ## Sources
 1. Liang, K., Smith, E. R., Aoi, Y., Stoltz, K. L., Katagi, H., Woodfin, A. R., … Shilatifard, A. (2018). Targeting Processive Transcription Elongation via SEC Disruption for MYC-Induced Cancer Therapy. Cell, 175(3), 766–779.
