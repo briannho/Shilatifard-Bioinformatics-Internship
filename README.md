@@ -6,7 +6,7 @@ This repository contains all the python and shell scripts I've coded and execute
 
 Note, all original data were taken from NCBI. Some of the datasets were too large, thus were not allowed to be uploaded. 
 
-##Sources
+## Sources
 1. Liang, K., Smith, E. R., Aoi, Y., Stoltz, K. L., Katagi, H., Woodfin, A. R., … Shilatifard, A. (2018). Targeting Processive Transcription Elongation via SEC Disruption for MYC-Induced Cancer Therapy. Cell, 175(3), 766–779.
 
 2. Wang, L., Ozark, P. A., Smith, E. R., Zhao, Z., Marshall, S. A., Rendleman, E. J., … Shilatifard, A. (2018). TET2 coactivates gene expression through demethylation of enhancers. Science Advances, 4(11).
